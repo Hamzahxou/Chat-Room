@@ -96,3 +96,43 @@ body {
     opacity: 1;
   }
 }
+
+.loading-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  /* background: rgba(0, 0, 0, 0.5); */
+  z-index: 100;
+  pointer-events: none;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.loading-area span {
+  --wh: 60px;
+
+  display: inline-block;
+  width: var(--wh);
+  height: var(--wh);
+
+  border: 10px solid #424242;
+  border-radius: 50%;
+  border-top-color: #ffffff;
+
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

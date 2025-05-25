@@ -35,4 +35,15 @@ skeleton.innerHTML = `
     </div>
   </div>
 </div>
+<div class="loading-area">
+  <span></span>
+</div>
 `;
+
+const loadingArea = document.querySelector(".loading-area");
+setTimeout(() => {
+  loadingArea.style.opacity = "0";
+}, 2000);
+setTimeout(() => {
+  loadingArea.style.opacity = "1";
+}, 3000);
